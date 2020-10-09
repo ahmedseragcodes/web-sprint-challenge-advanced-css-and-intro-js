@@ -209,8 +209,9 @@ Practice accessing data above by console.log-ing following items:
 (1) Name of the first artist (0th index) in the array
 (2) Bio of the third artist (2nd index) in the array */
 
-console.log(artists[0].name);
-console.log(artists[2].bio);
+console.log(artists[0]["name"]);
+
+console.log(artists[2]["bio"]);
 
 
 
@@ -238,10 +239,10 @@ function getArtistByIndex(artists, id) {
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born in and died in 20th century (1900-2000) example born in 1901 and died in 1959 - included / born in 1889 and died in 1925 not included - should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(yearRange){
+function get20s(data){
   let filteredArtists=[];
   for (let i=0; i<artists.length; i++){
-  if (artists[i].years.split(" ")>=yearRange){
+  if (artists[i].years.split(" ")>=data){
   filteredArtists.push(artists[i].name);
   }
   }
@@ -263,7 +264,7 @@ Create a function called `removeArtist` that takes two arguments:
 */
 function removeArtist(artists, index) {
   delete artists[index];
-  return artists;
+  return artists.length-1;
 }
    
 
@@ -281,18 +282,16 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(){
-  const newArtist={"id": 20,
-                   "name": "Ahmed Serag",
-                   "years":1991-2070,
-                   "genre":"Web Design",
-                   "nationality": "Canadian-American",
-                   "bio": "mission driven, ambitious, caring, intelligent",
-                  }
+function addArtist(newArtist){
   artists.push(newArtist);
   return artists;
   }
-
+addArtist([{"id": 20,
+"name": "Ahmed Serag",
+"years":"1991-2070",
+"genre":"Web Design",
+"nationality": "Canadian-American",
+"bio": "mission driven, ambitious, caring, intelligent",}]);
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
