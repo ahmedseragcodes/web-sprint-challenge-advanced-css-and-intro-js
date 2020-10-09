@@ -282,17 +282,21 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(newArtist){
-    artists.push(newArtist);
-    return artists;
-    }
+function addArtist(object){
+  artists.push(object);
+  return artists;
+}
 addArtist({
-      "id": 20,
-      "name": "Ahmed Serag",
-      "years":"1991-2070",
-      "genre":"Web Design",
-      "nationality": "Canadian-American",
-      "bio": "testing if this is just a matter of creating two sentences. I mean the first sentence is pretty short, but that combined with this should trigger this"});
+  "id": 20,
+  "name": "Ahmed Serag",
+  "years": "1991-2017",
+  "genre": "Web Design",
+  "nationality": "Canadian-American",
+  "bio": "testing if this is just a matter of creating two sentences. I mean the first sentence is pretty short, but that combined with this should trigger this",
+  "wikipedia": "http://en.wikipedia.org",
+  "paintings": 15
+});
+
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Create a function called lotsOfArt() that takes one argument: 
 
@@ -337,11 +341,15 @@ The function should console.log 50 chunks of HTML code that match the structure 
 
 ‼️ You do **NOT** need to get these to display on your page, but you can copy and paste the result into your HTML file if you'd like to see what that would look like. */
 
-function getHTML(/* Code here */){
-
-    /* Code here */
-
+function getHTML(data){
+  for (let i in data){
+    console.log(`image of ${artists[i].name}`);
+    console.log(`${artists[i].name}`);
+    console.log(`${artists[i].wikipedia}`);
+    console.log(`${artists[i].bio}`);
   }
+  }
+  getHTML(artists);
 
 
 /* 💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪
