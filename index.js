@@ -239,10 +239,10 @@ function getArtistByIndex(artists, id) {
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born in and died in 20th century (1900-2000) example born in 1901 and died in 1959 - included / born in 1889 and died in 1925 not included - should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(data){
+function get20s(){
   let filteredArtists=[];
-  for (let i=0; i<artists.length; i++){
-  if (artists[i].years.split(" ")>=data){
+  for (let i=0; i<artists.length-1; i++){
+  if (artists[i].years.split(" ")>="1900-2000"){
   filteredArtists.push(artists[i].name);
   }
   }
@@ -283,17 +283,16 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 At the end, this function should return the new array with information added"*/
 
 function addArtist(newArtist){
-  artists.push(newArtist);
-  return artists;
-  }
-addArtist([{"id": 20,
-"name": "Ahmed Serag",
-"years":"1991-2070",
-"genre":"Web Design",
-"nationality": "Canadian-American",
-"bio": "mission driven, ambitious, caring, intelligent",}]);
-  
-
+    artists.push(newArtist);
+    return artists;
+    }
+addArtist({
+      "id": 20,
+      "name": "Ahmed Serag",
+      "years":"1991-2070",
+      "genre":"Web Design",
+      "nationality": "Canadian-American",
+      "bio": "testing if this is just a matter of creating two sentences. I mean the first sentence is pretty short, but that combined with this should trigger this"});
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Create a function called lotsOfArt() that takes one argument: 
 
