@@ -20,6 +20,10 @@ font: inherit;
 vertical-align: baseline;  
 }
 /*GENERAL STYLES*/
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+}
 html{
     font-size:62.5%;
 }
