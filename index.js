@@ -355,11 +355,19 @@ function getHTML(data){
 /* 💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪
 Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
 
-function randomize(/* Code here */){
+function randomize(artists){
+    for (let i=0; i<artists.length; i++){
+    artists[Math.floor(Math.random()*[i])];
+    }
+  } /* returns one random at a time */
 
-    /* Code here */
+  OR 
 
-  }
+  let artists2=[];
+for (let i=0; i<artists.length; i++){
+artists2.push(artists[Math.floor(Math.random()*[i])]);
+console.log(artists2);
+} /* returns large array in random order, but for some reason one is cut off at the top*/
 
 
  /* 💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪
