@@ -365,7 +365,15 @@ function randomize(/* Code here */){
  /* 💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪
  Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
 
- 
+ let sum=0;
+for (let i=0; i<artists.length; i++){
+  sum+=artists[i].paintings;
+}
+console.log(sum/20); /* 205.8 is average paintings / artist */
+
+artists.map(artists=>artists.paintings-205.8); /*difference between artists paintings and average paintins / artist */
+
+ artists.filter(artists=>artists.nationality==="Russian"); /*all artists with Russian nationality */
  
  
  /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑*/
